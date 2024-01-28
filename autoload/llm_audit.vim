@@ -17,7 +17,6 @@ function! llm_audit#get_answer()
 
 	let command = ["echo", "\"", code, "\"", " | ", "python -m llm_audit", "-p", g:llm_audit_prefix, "-a", g:llm_audit_addition, "-m", g:llm_audit_model, "-r", g:llm_audit_role]
 	let cmdexec= join(command, " ")
-	echo cmdexec
 	let s:answer = system(cmdexec)
 	return s:answer
 endfunction
