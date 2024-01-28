@@ -14,9 +14,11 @@ endfunction
 
 function! llm_audit#get_answer()
 	let code = s:get_visual_selection()	
-	let command = ["python -m llm_audit", "-p", g:llm_audit_prefix, "-a", g:llm_audit_addition, "-m", g:llm_audit_model, "-r", g:llm_audit_role]
-	let cmdexec = join(command, " ")
-	let s:answer = system(cmdexec, code)
+
+	let command = ["echo", "\"", code, "\"", " | ", "python -m llm_audit", "-p", g:llm_audit_prefix, "-a", g:llm_audit_addition, "-m", g:llm_audit_model, "-r", g:llm_audit_role]
+	let cmdexec= join(command, " ")
+	echo cmdexec
+	let s:answer = system(cmdexec)
 	return s:answer
 endfunction
 
