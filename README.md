@@ -25,7 +25,7 @@ let g:llm_audit_prefix="prefix"
 " oasst_sft_4_pythia_12b_epoch_35, santacoder, bloom,
 " flan_t5_xxl, code_davinci_002, text_ada_001,
 " text_babbage_001, text_curie_001, text_davinci_002,
-" text_davinci_003
+" text_davinci_003, pi
 let g:llm_audit_model="model" 
 " set addition
 " default is none
